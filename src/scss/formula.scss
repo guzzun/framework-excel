@@ -3,4 +3,31 @@
 
 .excel__formula {
     position: absolute;
+    top: $header-height+$toolbar-height;
+    right: 0;
+    left: 0;
+    height: $formula-height;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    align-items: center;
+
+    .info {
+        min-width: $cell-width;
+        text-align: center;
+        font-size: 18px;
+        font-style: italic;
+        color: $gray;
+        border-right: 1px solid $gray;
+    }
+
+    .input {
+        width: 100%;
+        height: 100%;
+        padding: 4px;
+        font-size: 12px;
+        outline: none;
+        text-wrap: nowrap;
+        white-space: nowrap;
+        overflow: hidden;
+    }
 }

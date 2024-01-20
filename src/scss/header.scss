@@ -6,11 +6,12 @@
     top: 0;
     right: 0;
     left: 0;
-    padding: 8px 4px 0;
+    padding: 8px 4px;
     height: $header-height;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
     
     // .excel .excel__header > .input
     & .input {

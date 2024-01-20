@@ -1,0 +1,11 @@
+configurare Webpack (import / export)
+configurare babel
+configurare SCSS
+configurare ESlint
+
+2 moduri (dev && production)
+    dev (dev server, source map, ESlint, not minify(js si css))
+    production (cod minificat)
+
+creare HTML pentru Excel si separeara componentelor in SCSS
+creare DashBoard in HTML

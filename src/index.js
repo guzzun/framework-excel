@@ -1,3 +1,8 @@
-import "./scss/index.scss";
+import './scss/index.scss';
+import Excel from './components/excel/Excel';
 
-console.log("hello from index.js");
+const excel = new Excel('#App', {
+    components: [
+    ];
+});
+

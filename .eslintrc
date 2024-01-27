@@ -24,6 +24,7 @@
                 "FunctionExpression": false
               }
             }
-        ]
+        ],
+        "linebreak-style": ["error", "windows"]    
     }
 }

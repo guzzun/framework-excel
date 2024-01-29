@@ -1,20 +1,31 @@
 class Dom {
   constructor(selector) {
-    this.el = typeof selector === 'string' ?
+    this.$el = typeof selector === 'string' ?
     document.querySelector(selector) : selector;
   }
   // add
   html(html) {
     if (typeof html === 'string') {
-      this.el.innerHTML = html;
+      this.$el.innerHTML = html;
       return this;
     }
-    return this.el.outerHTML;
+    return this.$el.outerHTML.trim();
   }
   // delete
   clear() {
     this.html('');
     return this; // pattern chain
+  }
+  append(node) {
+    if (node instanceof Dom) {
+      node=node.$el;
+    }
+    if (Element.prototype.append) {
+      this.$el.append(node);
+    } else {
+      this.$el.appendChild(node);
+    }
+    return this;
   }
 }
 

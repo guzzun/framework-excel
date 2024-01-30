@@ -27,6 +27,9 @@ class Dom {
     }
     return this;
   }
+  on(eventType, callback) {
+    this.$el.addEventListener(eventType, callback);
+  }
 }
 
 export function $(selector) {

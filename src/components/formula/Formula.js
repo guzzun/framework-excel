@@ -5,8 +5,14 @@ class Formula extends ExcelComponent {
   constructor($root) {
     super($root, {
       name: 'Formula',
-      listeners: ['Click', 'Input'],
+      listeners: ['click', 'input'],
     });
+  }
+  onClick(event) {
+    console.log('formulaClick', event.target.textContent);
+  }
+  onInput(event) {
+    console.log(event.target.textContent.trim());
   }
   toHTML() {
     return `<div class="info">fx</div>

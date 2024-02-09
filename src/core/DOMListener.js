@@ -20,7 +20,10 @@ class DOMListener {
     });
   }
   removeDOMListeners() {
-    // HW
+    this.listeners.forEach((listener) => {
+      const method=`on${capitalize(listener)}`;
+      this.$root.off(listener, this[method].bind(this));
+    });
   }
 }
 

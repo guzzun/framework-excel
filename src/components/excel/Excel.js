@@ -12,6 +12,9 @@ class Excel {
     this.components = this.components.map((Component) => {
       const $el = $.create('div', Component.className);
       const component = new Component($el);
+      if (component.name) {
+        window['c'+component.name] = component;
+      }
       // $el.innerHTML = component.toHTML();
       $el.html(component.toHTML());
       // eslint-disable-next-line no-debugger
@@ -27,6 +30,9 @@ class Excel {
     this.components.forEach((component) => {
       component.init();
     });
+    // this.components.forEach((component) => {
+    //   component.remove();
+    // });
   }
 }
 

@@ -12,6 +12,7 @@
     padding: 7px 10px;
     display: flex;
     justify-content: center;
+    background-color: $toolbbar-bg-color;
 
     & .button {
         @include button ();

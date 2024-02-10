@@ -14,7 +14,7 @@ class Excel {
       const component = new Component($el);
       if (component.name) {
         window['c'+component.name] = component;
-      }
+      } // adaugam metodele locale in root JS
       // $el.innerHTML = component.toHTML();
       $el.html(component.toHTML());
       // eslint-disable-next-line no-debugger

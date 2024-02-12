@@ -6,18 +6,22 @@ class Table extends ExcelComponent {
   constructor($root) {
     super($root, {
       name: 'Table',
-      listeners: ['mouseup', 'mousedown', 'mousemove'],
+      listeners: ['mousedown'],
+      // listeners: ['mouseup', 'mousedown', 'mousemove'],
     });
   }
-  onMouseup(event) {
-    console.log('mouseUp', event.target);
-  }
+  // onMouseup(event) {
+  //   console.log('mouseUp', event.target);
+  // }'
   onMousedown(event) {
-    console.log('mouseDown', event.target);
+    if (event.target.dataset.resize) {
+      console.log('mouseDown', event.target.dataset.resize);
+    }
   }
-  onMousemove(event) {
-    console.log('mouseMove', event.target);
-  }
+
+  // onMousemove(event) {
+  //   console.log('mouseMove', event.target);
+  // }
   toHTML() {
     return createTable();
   }

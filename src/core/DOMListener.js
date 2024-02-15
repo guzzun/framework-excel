@@ -13,7 +13,6 @@ class DOMListener {
       const method =`on${capitalize(listener)}`;
       if (!this[method]) {
         const name = this.name || '';
-        console.log(name);
         throw new Error(`method ${method} is not implemented in ${name}`);
       }
       this.$root.on(listener, this[method].bind(this));

@@ -39,6 +39,34 @@ class Dom {
   getCoords() {
     return this.$el.getBoundingClientRect();
   }
+  findAll(selector) {
+    return this.$el.querySelectorAll(selector);
+  }
+  /*
+  height: '30px',
+  width: '42px',
+  background-color: 'red',
+  */
+  // css(styles = {}) {
+  //   // for (const key in styles) {
+  //   //   if (Object.hasOwnProperty.call(styles, key)) {
+  //   //     const element = styles[key];
+  //   //     console.log(key);
+  //   //     console.log(element);
+  //   //   }
+  //   // }
+  //   console.log('entries =', Object.entries(styles));
+  // }
+
+  css(styles = {}) {
+    Object.keys(styles).forEach((key) => {
+      this.$el.style[key] = styles[key];
+    });
+  }
+
+  get data() {
+    return this.$el.dataset;
+  }
 }
 
 export function $(selector) {

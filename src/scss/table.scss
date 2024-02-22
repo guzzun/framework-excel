@@ -44,7 +44,7 @@
             cursor: row-resize;
             
             &:hover {
-                opacity: 1;
+                opacity: 1 !important;
             }
 
             // &:first-of-type {
@@ -79,7 +79,7 @@
             cursor: col-resize;
 
             &:hover {
-                opacity: 1;
+                opacity: 1 !important;
             }
         }
     }

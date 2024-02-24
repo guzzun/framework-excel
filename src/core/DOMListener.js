@@ -8,6 +8,7 @@ class DOMListener {
     this.$root = $root;
     this.listeners = listeners;
   }
+
   initDOMListeners() {
     this.listeners.forEach((listener) => {
       const method =`on${capitalize(listener)}`;
@@ -18,6 +19,7 @@ class DOMListener {
       this.$root.on(listener, this[method].bind(this));
     });
   }
+
   removeDOMListeners() {
     this.listeners.forEach((listener) => {
       const method=`on${capitalize(listener)}`;

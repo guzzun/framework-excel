@@ -30,7 +30,6 @@ const toChar = (_item, index) => {
   return String.fromCharCode(CODES.A + index);
 };
 
-
 export const createTable = (rowsCount = 15) => {
   const rows = [];
   const colsCount = CODES.Z - CODES.A;

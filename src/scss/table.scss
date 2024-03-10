@@ -96,5 +96,10 @@
             border: none;
             border: 1px solid #3c74ff;
         } 
+
+        &.selected-bg {
+            z-index: 1; 
+            background-color:#3c74ff;
+        } 
     }
 }

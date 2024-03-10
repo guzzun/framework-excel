@@ -14,7 +14,7 @@ export const matrix = ($target, $current) => {
   }, []);
 };
 
-// {row, coll} - destructurizare;
+// {row, coll} - destructuring;
 export const nextSelector = (key, {row, coll}) => {
   const MIN_VALUE = 0;
   const MAX_ROWS = 35;

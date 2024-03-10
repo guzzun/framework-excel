@@ -32,18 +32,6 @@ class Table extends ExcelComponent {
     } else if (event.target.dataset.type === 'cell') {
       const $target = $(event.target);
       if (event.shiftKey) {
-        // console.log('targetCell', target.id(true));
-        // console.log('currentCell', this.selection.current.id(true));
-        // const target = $target.id(true);
-        // const current = this.selection.current.id(true);
-        // const colls = range(current.coll, target.coll);
-        // const rows = range(current.row, target.row);
-        // const idS = colls.reduce((previous, current) => {
-        //   rows.forEach((item) => {
-        //     previous.push(`${item}:${current}`);
-        //   });
-        //   return previous;
-        // }, []);
         const idS = matrix($target, this.selection.current);
         const $cells = idS.map((item) => {
           return this.$root.find(`[data-id="${item}"]`);
@@ -64,26 +52,6 @@ class Table extends ExcelComponent {
       const current = this.selection.current.id(true);
       const next = this.$root.find(nextSelector(key, current));
       this.selection.select(next);
-      // let $cells;
-
-      // switch (key) {
-      //   case 'ArrowUp':
-      //     $cells = this.$root.find(`[data-id="${current.row - 1}:${current.col}"]`);
-      //     break;
-      //   case 'ArrowDown':
-      //     $cells = this.$root.find(`[data-id="${current.row + 1}:${current.col}"]`);
-      //     break;
-      //   case 'ArrowRight':
-      //     $cells = this.$root.find(`[data-id="${current.row}:${current.col + 1}"]`);
-      //     break;
-      //   case 'ArrowLeft':
-      //     $cells = this.$root.find(`[data-id="${current.row}:${current.col - 1}"]`);
-      //     break;
-      // }
-
-      // if ($cells) {
-      //   this.selection.selectGroup($cells);
-      // }
     }
   }
 

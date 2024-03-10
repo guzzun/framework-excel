@@ -3,8 +3,8 @@ import {$} from '@core/dom';
 export const resizeHandler = (event, target) => {
   if (event.target.dataset.resize) {
     const $resizer = $(event.target);
-    // const $parent = $resizer.$el.parentNode; == nu treb de utilizate
-    // const $parent = $resizer.$el.closest('.column'); == mai bun, da tot nu
+    // const $parent = $resizer.$el.parentNode; == not to be used
+    // const $parent = $resizer.$el.closest('.column'); == better, but still not
     const $parent = $resizer.closest('[data-type="resizable"]');
     const coords = $parent.getCoords();
     const type = $resizer.data.resize;
